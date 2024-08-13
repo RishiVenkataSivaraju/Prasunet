@@ -27,8 +27,8 @@ function App() {
 
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
-      event.preventDefault(); // Prevent the default action (e.g., form submission)
-      sendMessage(); // Call the send message function
+      event.preventDefault(); 
+      sendMessage(); 
     }
   };
 

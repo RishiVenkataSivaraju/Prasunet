@@ -38,12 +38,12 @@ body {
   border-radius: 15px;
   color: #fff;
   background-color: #007bff;
-  align-self: flex-start; /* Default for incoming messages */
+  align-self: flex-start; 
 }
 
 .message.user {
   background-color: #28a745;
-  align-self: flex-end; /* Align user messages to the right */
+  align-self: flex-end; 
 }
 
 .input-container {
