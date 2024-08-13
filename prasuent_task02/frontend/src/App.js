@@ -25,12 +25,22 @@ function App() {
     }
   };
 
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault(); // Prevent the default action (e.g., form submission)
+      sendMessage(); // Call the send message function
+    }
+  };
+
   return (
     <div className="app-container">
       <div className="header">Chat Application</div>
       <div className="messages">
         {messages.map((msg, index) => (
-          <div key={index} className="message">
+          <div
+            key={index}
+            className={`message ${index % 2 === 0 ? '' : 'user'}`}
+          >
             {msg}
           </div>
         ))}
@@ -40,6 +50,7 @@ function App() {
           type="text"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
+          onKeyDown={handleKeyDown}
           placeholder="Type your message here..."
         />
         <button onClick={sendMessage}>Send</button>
@@ -49,5 +60,6 @@ function App() {
 }
 
 export default App;
+
 
 

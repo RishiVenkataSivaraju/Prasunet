@@ -27,14 +27,23 @@ body {
   overflow-y: auto;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
 }
 
 .message {
+  max-width: 60%;
+  padding: 10px;
   margin-bottom: 10px;
+  border-radius: 15px;
+  color: #fff;
+  background-color: #007bff;
+  align-self: flex-start; /* Default for incoming messages */
 }
 
-.message:nth-child(odd) {
-  background-color: #f9f9f9;
+.message.user {
+  background-color: #28a745;
+  align-self: flex-end; /* Align user messages to the right */
 }
 
 .input-container {
